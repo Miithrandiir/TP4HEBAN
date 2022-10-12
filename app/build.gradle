@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'fr.heban.android_tp_4'
+    namespace 'fr.heban.TP4HEBAN'
     compileSdk 32
 
     defaultConfig {
-        applicationId "fr.heban.android_tp_4"
+        applicationId 'fr.heban.TP4HEBAN'
         minSdk 26
         targetSdk 32
         versionCode 1

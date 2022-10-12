@@ -1,4 +1,4 @@
-package fr.heban.android_tp_4;
+package fr.heban.TP4HEBAN;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,31 +8,35 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CallActivity extends AppCompatActivity {
+public class URLActivity extends AppCompatActivity {
 
-    public static final String RESULT_DATA = "fr.heban.android_tp_4.CallActivity.RESULT";
+    public final static String DATA_RESULT = "fr.heban.android_tp_4.URLActivity.DATA_RESULT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_call);
+        setContentView(R.layout.activity_urlactivity);
     }
 
-    public void onBtnValidClicked(View view) {
-        EditText phone_number = (EditText) findViewById(R.id.input_phone_number);
-        String phone_number_value = phone_number.getText().toString();
+    public void onBtnValidClicked(View view)
+    {
+        EditText url_input = (EditText) findViewById(R.id.input_url);
 
-        if(!phone_number_value.equals("")) {
+        String url = url_input.getText().toString();
+        if(!url.equals("")) {
             Intent intent = new Intent();
-            intent.putExtra(RESULT_DATA, phone_number_value);
+            intent.putExtra(DATA_RESULT, url);
+
             setResult(RESULT_OK, intent);
             this.finish();
         } else {
             Toast.makeText(this, R.string.call_app_error, Toast.LENGTH_SHORT).show();
         }
+
     }
 
-    public void onBtnCancelClicked(View view) {
+    public void onBtnCancelClicked(View view)
+    {
         setResult(RESULT_CANCELED);
         this.finish();
     }

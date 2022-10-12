@@ -1,4 +1,4 @@
-package fr.heban.android_tp_4;
+package fr.heban.TP4HEBAN;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,37 +8,32 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class GeoActivity extends AppCompatActivity {
+public class SMSActivity extends AppCompatActivity {
 
-    public static final String RESULT_DATA = "fr.heban.android_tp_4.GeoActivity.RESULT_DATA";
-
+    public static final String RESULT_DATA = "fr.heban.android_TP_4.SMSActivity.RESULT_DATA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_geo);
+        setContentView(R.layout.activity_smsactivity);
     }
 
     public void onBtnValidClicked(View view) {
+        EditText input_phone_number = (EditText) findViewById(R.id.sms_input_phone_number);
+        EditText input_msg = (EditText) findViewById(R.id.sms_input_msg);
 
-        EditText latitude_input = (EditText) findViewById(R.id.input_latitude);
-        EditText longitude_input = (EditText) findViewById(R.id.input_longitude);
+        String phone_number = input_phone_number.getText().toString();
+        String msg = input_msg.getText().toString();
 
-        String latitude = latitude_input.getText().toString();
-        String longitude = longitude_input.getText().toString();
-
-        if(!latitude.equals("") && !longitude.equals("")) {
-
+        if(!msg.equals("") && !phone_number.equals("")) {
             Intent intent = new Intent();
-            intent.putExtra(RESULT_DATA, new String[]{latitude, longitude});
+            intent.putExtra(RESULT_DATA, new String[]{phone_number, msg});
 
             setResult(RESULT_OK, intent);
             this.finish();
-
         } else {
             Toast.makeText(this, R.string.app_fields_error, Toast.LENGTH_SHORT).show();
         }
-
     }
 
     public void onBtnCancelClicked(View view) {

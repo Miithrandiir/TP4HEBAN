@@ -1,4 +1,4 @@
-package fr.heban.android_tp_4;
+package fr.heban.TP4HEBAN;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
