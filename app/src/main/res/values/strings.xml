@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ANDROID_TP_4</string>
+    <string name="app_call">appeler</string>
+    <string name="app_sms">SMS</string>
+    <string name="app_mms">MMS</string>
+    <string name="app_web">WEB</string>
+    <string name="app_geo">GÉO</string>
+    <string name="app_title">Intentions Implicites</string>
+    <string name="call_app_title">Saisie téléphone</string>
+    <string name="call_app_num">Numéro</string>
+    <string name="call_app_enter_number">Saisir un numéro</string>
+    <string name="app_cancel">Annuler</string>
+    <string name="app_valid">Valider</string>
+    <string name="call_app_error">Le champs ne peut être vide</string>
+    <string name="sms_app_enter_text">Saisir votre message</string>
+    <string name="app_message">message</string>
+    <string name="sms_app_title">Saisie d\'un message</string>
+    <string name="app_fields_error">Tous les champs doivent être remplis</string>
+    <string name="url_app_title">Saisie URL</string>
+    <string name="app_url">URL</string>
+    <string name="url_app_enter_url">Saisir votre url</string>
+    <string name="geo_app_title">Saisie Coordonnées</string>
+    <string name="app_longitude">Longitude</string>
+    <string name="app_latitude">Latitude</string>
+    <string name="geo_app_enter_latitude">Saisir une latitude</string>
+    <string name="geo_app_enter_longitude">Saisir une longitude</string>
+</resources>
