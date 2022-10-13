@@ -18,6 +18,11 @@ public class SMSActivity extends AppCompatActivity {
         setContentView(R.layout.activity_smsactivity);
     }
 
+    /**
+     * Bouton valider appuyé
+     *
+     * @param view View
+     */
     public void onBtnValidClicked(View view) {
         EditText input_phone_number = (EditText) findViewById(R.id.sms_input_phone_number);
         EditText input_msg = (EditText) findViewById(R.id.sms_input_msg);
@@ -25,7 +30,7 @@ public class SMSActivity extends AppCompatActivity {
         String phone_number = input_phone_number.getText().toString();
         String msg = input_msg.getText().toString();
 
-        if(!msg.equals("") && !phone_number.equals("")) {
+        if (!msg.equals("") && !phone_number.equals("")) {
             Intent intent = new Intent();
             intent.putExtra(RESULT_DATA, new String[]{phone_number, msg});
 
@@ -36,6 +41,11 @@ public class SMSActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Bouton annuler appuyé
+     *
+     * @param view View
+     */
     public void onBtnCancelClicked(View view) {
         setResult(RESULT_CANCELED);
         this.finish();

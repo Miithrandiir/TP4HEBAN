@@ -7,7 +7,7 @@
     tools:context=".CallActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/call_activity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/call_app_title"
@@ -32,7 +32,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/call_label_phone_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/call_app_num" />
@@ -49,19 +49,19 @@
     </TableLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/call_button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onBtnCancelClicked"
         android:text="@string/app_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/call_button_validate"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/call_button_validate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onBtnValidClicked"
@@ -69,6 +69,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/call_button_cancel"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/geo_activity_label_latitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_latitude" />
@@ -42,7 +42,7 @@
             android:gravity="center">
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/geo_activity_label_longitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_longitude" />
@@ -59,7 +59,7 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/geo_activity_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/geo_app_title"
@@ -70,19 +70,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/geo_button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onBtnCancelClicked"
         android:text="@string/app_cancel"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/geo_button_validate"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout4" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/geo_button_validate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="onBtnValidClicked"
@@ -90,6 +90,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintStart_toEndOf="@+id/geo_button_cancel"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

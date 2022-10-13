@@ -19,6 +19,11 @@ public class GeoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_geo);
     }
 
+    /**
+     * Bouton valider appuyé
+     *
+     * @param view View
+     */
     public void onBtnValidClicked(View view) {
 
         EditText latitude_input = (EditText) findViewById(R.id.input_latitude);
@@ -27,7 +32,7 @@ public class GeoActivity extends AppCompatActivity {
         String latitude = latitude_input.getText().toString();
         String longitude = longitude_input.getText().toString();
 
-        if(!latitude.equals("") && !longitude.equals("")) {
+        if (!latitude.equals("") && !longitude.equals("")) {
 
             Intent intent = new Intent();
             intent.putExtra(RESULT_DATA, new String[]{latitude, longitude});
@@ -41,6 +46,11 @@ public class GeoActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Bouton annuler appuyé
+     *
+     * @param view View
+     */
     public void onBtnCancelClicked(View view) {
         setResult(RESULT_CANCELED);
         this.finish();

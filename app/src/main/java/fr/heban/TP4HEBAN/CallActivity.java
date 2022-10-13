@@ -18,11 +18,16 @@ public class CallActivity extends AppCompatActivity {
         setContentView(R.layout.activity_call);
     }
 
+    /**
+     * Bouton valider appuyé
+     *
+     * @param view View
+     */
     public void onBtnValidClicked(View view) {
         EditText phone_number = (EditText) findViewById(R.id.input_phone_number);
         String phone_number_value = phone_number.getText().toString();
 
-        if(!phone_number_value.equals("")) {
+        if (!phone_number_value.equals("")) {
             Intent intent = new Intent();
             intent.putExtra(RESULT_DATA, phone_number_value);
             setResult(RESULT_OK, intent);
@@ -32,6 +37,11 @@ public class CallActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Bouton annuler appuyé
+     *
+     * @param view View
+     */
     public void onBtnCancelClicked(View view) {
         setResult(RESULT_CANCELED);
         this.finish();

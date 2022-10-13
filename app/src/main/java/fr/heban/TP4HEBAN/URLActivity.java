@@ -18,12 +18,19 @@ public class URLActivity extends AppCompatActivity {
         setContentView(R.layout.activity_urlactivity);
     }
 
-    public void onBtnValidClicked(View view)
-    {
+    /**
+     * Bouton valider appuyé
+     *
+     * @param view View
+     */
+    public void onBtnValidClicked(View view) {
         EditText url_input = (EditText) findViewById(R.id.input_url);
 
         String url = url_input.getText().toString();
-        if(!url.equals("")) {
+        //On regarde si l'url comporte http ou https, si oui on le retire, car dans le traitement
+        //de la réponse on rajoute déjà le HTTP
+        url = url.replaceFirst("/(https)|(http)/g", "");
+        if (!url.equals("")) {
             Intent intent = new Intent();
             intent.putExtra(DATA_RESULT, url);
 
@@ -35,8 +42,12 @@ public class URLActivity extends AppCompatActivity {
 
     }
 
-    public void onBtnCancelClicked(View view)
-    {
+    /**
+     * Bouton annuler appuyé
+     *
+     * @param view View
+     */
+    public void onBtnCancelClicked(View view) {
         setResult(RESULT_CANCELED);
         this.finish();
     }
